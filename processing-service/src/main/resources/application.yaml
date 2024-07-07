@@ -1,0 +1,14 @@
+server:
+  port: 9082
+
+spring:
+  application:
+    name: processing-service
+  cloud:
+    consul:
+      discovery:
+        instance-id: ${spring.application.name}:${random.value}
+        prefer-ip-address: true
+        health-check-path: /actuator/health
+      host: ${HOST_IP:localhost}
+      port: 8500

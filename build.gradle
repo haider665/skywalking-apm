@@ -1,0 +1,13 @@
+plugins {
+	id 'java'
+}
+
+subprojects {
+	repositories {
+		mavenCentral()
+	}
+
+	ext {
+		set('springCloudVersion', "2023.0.2")
+	}
+}

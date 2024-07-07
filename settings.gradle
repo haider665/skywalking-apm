@@ -1,0 +1,4 @@
+rootProject.name = 'skywalking-apm'
+include 'callback-service'
+include 'gateway-service'
+include 'processing-service'
