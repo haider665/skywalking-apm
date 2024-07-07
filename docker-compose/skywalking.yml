@@ -74,16 +74,16 @@ services:
       SW_OAP_ADDRESS: http://oap:12800
       SW_ZIPKIN_ADDRESS: http://oap:9412
 
-  blog:
-    image: haider665/blog:v1
-    container_name: blog
-    depends_on:
-      oap:
-        condition: service_healthy
-    links:
-      - oap
-    ports:
-      - "8082:8082"
-    environment:
-      SW_AGENT_COLLECTOR_BACKEND_SERVICES: http://oap:11800
-      SW_AGENT_NAME: blog
+#  blog:
+#    image: haider665/blog:v1
+#    container_name: blog
+#    depends_on:
+#      oap:
+#        condition: service_healthy
+#    links:
+#      - oap
+#    ports:
+#      - "8082:8082"
+#    environment:
+#      SW_AGENT_COLLECTOR_BACKEND_SERVICES: http://oap:11800
+#      SW_AGENT_NAME: blog
