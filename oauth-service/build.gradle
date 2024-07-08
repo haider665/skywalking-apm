@@ -22,7 +22,7 @@ ext {
 }
 
 bootRun {
-    jvmArgs = ["-Dskywalking.agent.service_name=processing-service", "-javaagent:$rootDir/skywalking-agent/skywalking-agent.jar"]
+    jvmArgs = ["-Dskywalking.agent.service_name=oauth-service", "-javaagent:$rootDir/skywalking-agent/skywalking-agent.jar"]
 }
 
 dependencies {
@@ -36,8 +36,6 @@ dependencies {
 
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
-
-    implementation 'org.springframework.boot:spring-boot-starter-amqp'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'

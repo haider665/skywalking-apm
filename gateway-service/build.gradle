@@ -34,6 +34,9 @@ dependencies {
     implementation 'org.apache.skywalking:apm-toolkit-trace:9.2.0'
     implementation 'org.apache.skywalking:apm-toolkit-logback-1.x:9.2.0'
 
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }

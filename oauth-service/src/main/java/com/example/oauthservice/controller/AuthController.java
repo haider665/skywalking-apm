@@ -1,4 +1,4 @@
-package com.example.processingservice.controller;
+package com.example.oauthservice.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -9,16 +9,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author mojib.haider
- * @since 7/7/24
+ * @since 7/8/24
  */
 @Slf4j
 @RestController
-@RequestMapping("/processing")
-public class ProcessingController {
+@RequestMapping("/auth")
+public class AuthController {
 
-    @GetMapping("/save")
-    public ResponseEntity<String> save(){
-        log.info("Processing Service save");
-        return new ResponseEntity<>("Processed", HttpStatus.OK);
+    @GetMapping("/verify")
+    public ResponseEntity<String> verify(){
+        log.info("Auth service verify");
+        return new ResponseEntity<>("Verified", HttpStatus.OK);
     }
 }
